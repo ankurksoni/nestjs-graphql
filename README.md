@@ -12,6 +12,7 @@ $ npm install
 
 ```sh
 nest generate mo book
+nest generate r book
 ```
 
 ## Running the app
