@@ -15,6 +15,40 @@ nest generate mo book
 nest generate r book
 ```
 
+## graphQL playground queries
+
+```sh
+# Write your query or mutation here
+{
+  books {
+    id,
+    price,
+    title
+  }
+}
+
+mutation AddBook($bookArgs: AddBookArgs!){
+  addBook(addBookArgs: $bookArgs)
+}
+
+{
+  findBookById(bookId: 1){
+    id,
+    price,
+    title
+  }
+}
+
+mutation DeleteBook($bookId: Int!) {
+  deleteBook(bookId: $bookId)
+}
+
+
+mutation updateBook($bookId: Int!, $bookArgs: AddBookArgs!){
+  updateBook(bookId: $bookId, updateBookArgs: $bookArgs)
+}
+```
+
 ## Running the app
 
 ```bash
